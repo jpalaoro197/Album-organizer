@@ -80,7 +80,7 @@ namespace MusicOrg.Tests
       {
        //Arrange
       string description = "Walk the dog.";
-      Album newItem = new Album(description);
+      Album newAlbum = new Album(description);
 
        //Act
       int result = newAlbum.Id;
@@ -88,5 +88,18 @@ namespace MusicOrg.Tests
         //Assert
       Assert.AreEqual(1, result);
       }
+
+      [TestMethod]
+    public void Find_ReturnCorrectItems_Item()
+    {
+      string description01 = "Walk the dog";
+      string description02 = "Wash the dishes";
+      Album newAlbum1 = new Album(description01);
+      Album newAlbum2 = new Album(description02);
+
+      Album result = Album.Find(2);
+
+      Assert.AreEqual(newAlbum2, result);
+    }
   }
 }
