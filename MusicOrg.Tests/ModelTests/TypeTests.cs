@@ -65,5 +65,39 @@ namespace MusicOrg.Tests
     //Assert
     CollectionAssert.AreEqual(newList, result);
     }
+
+    [TestMethod]
+    public void GetAll_ReturnsCorrectPlatform_Platform()
+    {
+    //Arrange
+    string name01 = "Work";
+    string name02 = "School";
+    AlbumPlatform newPlatform1 = new AlbumPlatform(name01);
+    AlbumPlatform newPlatform2 = new AlbumPlatform(name02);
+
+    //Act
+    AlbumPlatform result =  AlbumPlatform.Find(2);
+
+    //Assert
+    Assert.AreEqual(newPlatform2, result);
+    }
+
+    [TestMethod]
+    public void AddAlbum_AssociatesAlbumWithAlbumPlatform_AlbumList()
+    {
+    //Arrange
+      string description = "Walk the dog.";
+      Album newAlbum = new Album(description);
+      List<Album> newList = new List<Album> { newAlbum };
+      string name = "Work";
+      AlbumPlatform newPlatform = new AlbumPlatform(name);
+      newPlatform.AddAlbum(newAlbum);
+
+    //Act
+      List<Album> result = newPlatform.Albums;
+
+    //Assert
+      CollectionAssert.AreEqual(newList, result);
+    }
   }
 }
