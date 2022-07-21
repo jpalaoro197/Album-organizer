@@ -48,5 +48,22 @@ namespace MusicOrg.Tests
     //Assert
     Assert.AreEqual(1, result);
     }
+
+    [TestMethod]
+    public void GetAll_ReturnsAllPlatformObjects_PlatformList()
+    {
+    //Arrange
+    string name01 = "Work";
+    string name02 = "School";
+    AlbumPlatform newPlatform1 = new AlbumPlatform(name01);
+    AlbumPlatform newPlatform2 = new AlbumPlatform(name02);
+    List<AlbumPlatform> newList = new List<AlbumPlatform> { newPlatform1, newPlatform2 };
+
+    //Act
+    List<AlbumPlatform> result = AlbumPlatform.GetAll();
+
+    //Assert
+    CollectionAssert.AreEqual(newList, result);
+    }
   }
 }
