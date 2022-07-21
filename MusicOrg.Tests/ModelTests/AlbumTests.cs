@@ -28,5 +28,21 @@ namespace MusicOrg.Tests
       string result = newAlbum.Description;
       Assert.AreEqual(description, result);
     }
+
+    [TestMethod]
+    public void SetDescription_SetDescription_String()
+    {
+      //Arrange
+      string description = "Walk the dog.";
+      Album newAlbum = new Album(description);
+
+      //Act
+      string updatedDescription = "Do the dishes";
+      newAlbum.Description = updatedDescription;
+      string result = newAlbum.Description;
+
+      //Assert
+      Assert.AreEqual(updatedDescription, result);
+    }
   }
 }
