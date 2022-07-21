@@ -64,8 +64,8 @@ namespace MusicOrg.Tests
       //Arrange
       string description01 = "Walk the dog";
       string description02 = "Wash the dishes";
-      Album newItem1 = new Album(description01);
-      Album newItem2 = new Album(description02);
+      Album newAlbum1 = new Album(description01);
+      Album newAlbum2 = new Album(description02);
       List<Album> newList = new List<Album> { newAlbum1, newAlbum2 };
 
       //Act
