@@ -6,19 +6,19 @@ using System;
 namespace MusicOrg.Tests
 {
   [TestClass]
-  public class TypeTests : IDisposable
+  public class AlbumPlatformTests : IDisposable
   {
 
     public void Dispose()
     {
-      Type.ClearAll();
+      AlbumPlatform.ClearAll();
     }
 
      [TestMethod]
-    public void TypeConstructor_CreatesInstanceOfType_Type()
+    public void AlbumPlatformConstructor_CreatesInstanceOfAlbumPlatform_AlbumPlatform()
     {
-      Type newType = new Type("test type");
-      Assert.AreEqual(typeof(Type), newType.GetType());
+      AlbumPlatform newAlbumPlatform = new AlbumPlatform("test type");
+      Assert.AreEqual(typeof(AlbumPlatform), newAlbumPlatform.GetType());
     }
   }
 }
