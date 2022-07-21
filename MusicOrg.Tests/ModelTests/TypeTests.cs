@@ -34,5 +34,19 @@ namespace MusicOrg.Tests
     //Assert
     Assert.AreEqual(name, result);
     }
+
+    [TestMethod]
+    public void GetId_ReturnsPlatformId_Int()
+    { 
+    //Arrange
+    string name = "Test platform";
+    AlbumPlatform newPlatform = new AlbumPlatform(name);
+
+    //Act
+    int result = newPlatform.Id;
+
+    //Assert
+    Assert.AreEqual(1, result);
+    }
   }
 }
