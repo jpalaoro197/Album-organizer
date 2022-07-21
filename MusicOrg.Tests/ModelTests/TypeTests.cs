@@ -20,5 +20,19 @@ namespace MusicOrg.Tests
       AlbumPlatform newAlbumPlatform = new AlbumPlatform("test type");
       Assert.AreEqual(typeof(AlbumPlatform), newAlbumPlatform.GetType());
     }
+
+     [TestMethod]
+    public void GetName_ReturnsName_String()
+    {
+    //Arrange
+    string name = "Test Platform";
+    AlbumPlatform newPlatform = new AlbumPlatform(name);
+
+    //Act
+    string result = newPlatform.Name;
+
+    //Assert
+    Assert.AreEqual(name, result);
+    }
   }
 }
