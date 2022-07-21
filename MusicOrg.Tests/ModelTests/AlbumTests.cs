@@ -44,5 +44,18 @@ namespace MusicOrg.Tests
       //Assert
       Assert.AreEqual(updatedDescription, result);
     }
+
+    [TestMethod]
+    public void GetAll_ReturnsEmptyList_AlbumList()
+    {
+      // Arrange
+      List<Album> newList = new List<Album> { };
+
+      // Act
+      List<Album> result = Album.GetAll();
+
+      // Assert
+      CollectionAssert.AreEqual(newList, result);
+    }
   }
 }
