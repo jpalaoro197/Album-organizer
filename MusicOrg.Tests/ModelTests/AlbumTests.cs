@@ -74,5 +74,19 @@ namespace MusicOrg.Tests
       //Assert
       CollectionAssert.AreEqual(newList, result);
     }
+
+    [TestMethod]
+      public void GetId_AlbumsInstantiateWithAnIdAndGetterReturns_Int()
+      {
+       //Arrange
+      string description = "Walk the dog.";
+      Album newItem = new Album(description);
+
+       //Act
+      int result = newAlbum.Id;
+
+        //Assert
+      Assert.AreEqual(1, result);
+      }
   }
 }
