@@ -19,5 +19,14 @@ namespace MusicOrg.Tests
       Album newAlbum = new Album("test");
       Assert.AreEqual(typeof(Album), newAlbum.GetType());
     }
+
+    [TestMethod]
+    public void GetDescription_ReturnsDescription_String()
+    {
+      string description = "Walk the dog.";
+      Album newAlbum = new Album(description);
+      string result = newAlbum.Description;
+      Assert.AreEqual(description, result);
+    }
   }
 }
