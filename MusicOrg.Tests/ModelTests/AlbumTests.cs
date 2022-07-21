@@ -10,7 +10,7 @@ namespace MusicOrg.Tests
   {
     public void Dispose()
     {
-    Item.ClearAll();
+    Album.ClearAll();
     }
 
     [TestMethod]
